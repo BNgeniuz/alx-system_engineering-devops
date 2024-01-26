@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 # print 10 times Best School
+# You must use the for loop (while and until are forbidden)
+
+
 for ((k = 0; k < 10; k++)) 
 do
 	echo "Best School";
