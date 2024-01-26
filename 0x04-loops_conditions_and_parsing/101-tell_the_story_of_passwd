@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # This script tells a story based on the contents of the `/etc/passwd` file
+# You must use the while loop (for and until are forbidden)
+
 myfile="/etc/passwd"
 f1=""
 f2=""
