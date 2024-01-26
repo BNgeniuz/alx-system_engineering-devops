@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # This script loops from 1 to 20 displaying
+# You must use the while loop (for and until are forbidden)
+# You must use the case statement
 
 i="1"
 
