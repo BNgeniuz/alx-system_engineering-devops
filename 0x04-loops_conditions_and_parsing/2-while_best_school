@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Print 'best shcoll' 10 times
+#You must use the while loop (for and until are forbidden)
 
 k=0
 
