@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Print 'best school' until i less than 10
+# You must use the until loop (for and while are forbidden)
 
 k=0
 
