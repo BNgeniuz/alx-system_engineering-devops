@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Print bad luck at specifi index.
-
+# You must use the while loop (for and until are forbidden)
+# You must use the if, elif and else statements
 i=1
 
 while [ $i -le 10 ]
