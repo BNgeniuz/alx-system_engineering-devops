@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Print 'best school' until i less than 10
+
+k=0
+
+until [ $k -eq 10 ]
+do
+    echo "Best School"
+    ((k++))
+done
