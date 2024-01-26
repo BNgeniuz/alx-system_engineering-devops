@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Display Time - Hour, Minutes
-
+# You must use the while loop (for and until are forbidden
 hour=0
 
 while [ $hour -le 12 ]
@@ -14,4 +14,3 @@ do
   done
   (( hour++ ))
 done
-
