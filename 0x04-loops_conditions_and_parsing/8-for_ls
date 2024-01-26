@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 #The content of the current directory
+# You must use the for loop (while and until are forbidden)
+# Do not display hidden files
 
 mylist=$(ls)
 
