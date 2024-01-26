@@ -3,12 +3,11 @@
 
 k=1
 
-while [ $k -lt 10 ]
+while [ $k -lt 11 ]
 do
     echo "Best School"
-    if [ $k = 8 ]
+    if [ $k -eq 9 ]
     then
         echo "Hi"
     fk
     ((k++))
-done
