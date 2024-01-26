@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # Say hi on the 9th loop
+# You must use the while loop (for and until are forbidden)
+# You must use the if statement
 
 k="0"
 
