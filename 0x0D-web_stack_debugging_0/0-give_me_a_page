@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Fixing a page connecting to the internet
+
+service apache2 restart
