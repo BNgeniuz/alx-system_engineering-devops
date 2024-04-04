@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# Configuring and checking my DNS
+
+# Function to display subdomain information
+display_info() {
+    local domain="$1"
+    local subdomain="$2"
+    local ip=$(dig +short $subdomain.$domain)
+    local record_type=$(dig $subdomain.$domain | awk '/^;; ANSWER SECTION:$/ { getline; print $4 }')
+
+    echo "The subdomain $subdomain is a $record_type record and points to $ip"
+}
+
+# Main script
+domain="$1"
+subdomain="$2"
+
+if [ -z "$subdomain" ]; then
+    display_info "$domain" www
+    display_info "$domain" lb-01
+    display_info "$domain" web-01
+    display_info "$domain" web-02
+else
+    display_info "$domain" "$subdomain"
+fi

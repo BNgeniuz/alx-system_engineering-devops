@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Configuring SSL termination and certificates
+
+frontend my_frontend
+        mode http
+        bind -- *:80
+        bind -- *:443 ssl crt /etc/letsencrypt/live/www.bngeniuz.tech/all.pem
+        http-request redirect scheme https unless \{ ssl_fc \}
+        http-request set-header X-Forwarded-Proto https if \{ ssl_fc \}
+        http-request set-header X-Forwarded-Proto http if \! \{ ssl_fc \}
+        default_backend my_backend
+
+
+backend my_backend
+        mode http
+        balance roundrobin
+        server 460745-web-01 54.160.75.69:80 check
+        server 460745-web-02 54.158.199.136:80 check
