@@ -2,6 +2,7 @@
 """
 Requests module for sending HTTP requests to the Reddit API
 """
+
 import requests
 
 
@@ -15,4 +16,4 @@ def number_of_subscribers(subreddit):
         subscribers = data['data']['subscribers']
         return subscribers
     else:
-        return 0)
+        return 0
