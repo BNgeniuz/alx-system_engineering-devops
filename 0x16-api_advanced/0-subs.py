@@ -5,15 +5,18 @@ Requests module for sending HTTP requests to the Reddit API
 
 import requests
 
-
 def number_of_subscribers(subreddit):
-    """Return the total number of subscribers on a given subreddit."""
-    headers = {'User-Agent': 'MyRedditBot/0.0.1'}
-    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
+    """
+    Get the number of subscribers for a given subreddit
+    """
+    url = f"https://www.reddit.com/r/{subreddit}/about.json"
+    headers = {'user-agent': 'request'}
     response = requests.get(url, headers=headers, allow_redirects=False)
-    if response.status_code == 200:
-        data = response.json()
-        subscribers = data['data']['subscribers']
-        return subscribers
-    else:
+
+    if response.status_code != 200:
         return 0
+
+    data = response.json().get("data")
+    num_subs = data.get("subscribers")
+
+    return num_subs
