@@ -22,6 +22,3 @@ def number_of_subscribers(subreddit):
         else:
             # If the subreddit is invalid, return 0
             return 0
-    except Exception as e:
-        # In case of any exception, return 0
-        return 0
