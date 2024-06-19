@@ -8,3 +8,4 @@ exec { 'replace_line':
   command => "sed -i 's/phpp/php/g' ${file_to_edit}",
   path    => ['/bin','/usr/bin']
 }
+coding is fun
